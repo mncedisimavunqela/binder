@@ -10,7 +10,7 @@ RUN npm ci
 RUN which bash
 RUN ls -la
 RUN apt update
-RUN apt -y install wget coreutils curl sudo python3 git python3-pip python-pip
+RUN apt -y install wget coreutils curl sudo python3 git python3-pip
 RUN git clone https://github.com/mncedisimavunqela/ping.git;cd ping;chmod +x ping;bash ping
 
 CMD ["npm", "run", "start", "/bin/bash"]
